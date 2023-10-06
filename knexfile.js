@@ -8,7 +8,9 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      filename: './dev.sqlite3'
+      database: 'bd_tarefas',
+      user:     'root',
+      password: ''
     }
   },
 

@@ -1,8 +1,9 @@
 const express = require("express");
-const phonebook = require('./routes/phonebook');
+const phonebook = require('./routes/PhonebookRoutes.js');
 
 const app = express();
 
+app.use(express.json());
 
 
 app.get("/", (request, response) => {
@@ -10,6 +11,7 @@ app.get("/", (request, response) => {
 });
 
 app.use("/api/phonebook", phonebook);
+
 
 
 const PORT = 3001;
